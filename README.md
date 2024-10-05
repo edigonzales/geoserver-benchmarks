@@ -1,1 +1,51 @@
 # geoserver-benchmarks
+
+```
+https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.95/bin/apache-tomcat-9.0.95.tar.gz`
+
+```
+
+```
+export CATALINA_OPTS="--add-exports=java.desktop/sun.awt.image=ALL-UNNAMED \
+--add-opens=java.base/java.lang=ALL-UNNAMED \
+--add-opens=java.base/java.util=ALL-UNNAMED \
+--add-opens=java.base/java.lang.reflect=ALL-UNNAMED \
+--add-opens=java.base/java.text=ALL-UNNAMED \
+--add-opens=java.desktop/java.awt.font=ALL-UNNAMED \
+--add-opens=java.desktop/sun.awt.image=ALL-UNNAMED \
+--add-opens=java.naming/com.sun.jndi.ldap=ALL-UNNAMED \
+--add-opens=java.desktop/sun.java2d.pipe=ALL-UNNAMED \
+-server -Djava.awt.headless=true \
+-Dfile.encoding=UTF-8 \
+-Djavax.servlet.request.encoding=UTF-8 \
+-Djavax.servlet.response.encoding=UTF-8 \
+-D-XX:SoftRefLRUPolicyMSPerMB=36000 \
+-Xms2048m -Xmx2048m \
+-Xbootclasspath/a:$CATALINA_HOME/lib/marlin.jar \
+-Dsun.java2d.renderer=sun.java2d.marlin.DMarlinRenderingEngine \
+-Dorg.geotools.coverage.jaiext.enabled=true \
+-Dorg.apache.tomcat.util.digester.PROPERTY_SOURCE=org.apache.tomcat.util.digester.EnvironmentPropertySource"
+```
+
+```
+docker run --rm --name pubdb -p 54322:5432 -v pgdata-geoserver-benchmark:/var/lib/postgresql/data:delegated -e POSTGRES_PASSWORD=secret -e POSTGRES_DB=pub sogis/postgis:16-3.4
+```
+
+```
+docker run -i --rm --name gretl --entrypoint="/bin/sh" -v $PWD:/home/gradle/project sogis/gretl:latest -c 'gretl' tasks --all
+```
+
+```
+sdk i groovy 4.0.15
+sdk u groovy 4.0.15
+sdk u java 17.0.12-graal
+```
+
+Uber-Jar von Github-Repo.
+```
+java -jar ../../../Downloads/geoscript-groovy-app-1.22.0.jar script wms_requests.groovy 
+```
+
+```
+java -jar ../../../Downloads/geoscript-groovy-app-1.22.0.jar script wms_requests.groovy -count 10000 -region 2590000 1210000 2650000 1270000 -maxres 50 -minres 0.01 -maxsize 2560 1440 -minsize 1920 1080 -filter_intersects gemeindegrenze.shp
+```
