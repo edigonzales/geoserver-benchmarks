@@ -237,13 +237,13 @@ while (count > 0) {
         }
 
         if (first) {
-            output_file.write(width+","+height+","+bbox[0]+","+bbox[1]+","+bbox[2]+","+bbox[3]+"\n")
+            output_file.write(width+";"+height+";"+bbox[0]+","+bbox[1]+","+bbox[2]+","+bbox[3]+"\n")
             if (srs_output != null) {
                 output_file2.write("$srs2_width;$srs2_height;${transformed.minX},${transformed.minY},${transformed.maxX},${transformed.maxY}\n")
             }
             first = false
         } else {
-            output_file.write(width+","+height+","+bbox[0]+","+bbox[1]+","+bbox[2]+","+bbox[3]+"\n")
+            output_file.write(width+";"+height+";"+bbox[0]+","+bbox[1]+","+bbox[2]+","+bbox[3]+"\n")
             if (srs_output != null) {
                 output_file2.write("$srs2_width;$srs2_height;${transformed.minX},${transformed.minY},${transformed.maxX},${transformed.maxY}\n")
             }

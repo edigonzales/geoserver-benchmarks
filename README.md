@@ -49,3 +49,20 @@ java -jar ../../../Downloads/geoscript-groovy-app-1.22.0.jar script wms_requests
 ```
 java -jar ../../../Downloads/geoscript-groovy-app-1.22.0.jar script wms_requests.groovy -count 10000 -region 2590000 1210000 2650000 1270000 -maxres 50 -minres 0.01 -maxsize 2560 1440 -minsize 1920 1080 -filter_intersects gemeindegrenze.shp
 ```
+
+```
+http://localhost:8080/geoserver/topp/wms?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&FORMAT=image%2Fpng&TRANSPARENT=true&STYLES&LAYERS=topp%3Anutzungsplanung_grundnutzung&SRS=EPSG%3A2056&WIDTH=768&HEIGHT=700&BBOX=2614044.9674958545%2C1229525.750914785%2C2628704.44799237%2C1242887.2565756715
+```
+
+```
+/Users/stefan/apps/apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l temurin-17-g1gc.jtl -e -o temurin-17-g1gc
+```
+
+```
+apt-get update
+apt-get install xubuntu-desktop
+apt-get install software-properties-common
+add-apt-repository ppa:x2go/stable
+apt-get update
+apt-get install x2goserver x2goserver-xsession
+```
