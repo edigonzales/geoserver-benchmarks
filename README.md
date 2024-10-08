@@ -32,7 +32,7 @@ docker run --rm --name pubdb -p 54322:5432 -v pgdata-geoserver-benchmark:/var/li
 ```
 
 ```
-docker run -i --rm --name gretl --entrypoint="/bin/sh" -v $PWD:/home/gradle/project sogis/gretl:latest -c 'gretl tasks --all'
+docker run -i --rm --name gretl --entrypoint="/bin/sh" -v gradle_cache:/home/gradle/.gradle -v $PWD:/home/gradle/project sogis/gretl:latest -c 'gretl tasks --all'
 ```
 
 ```
