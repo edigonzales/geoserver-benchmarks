@@ -20,7 +20,7 @@ export CATALINA_OPTS="--add-exports=java.desktop/sun.awt.image=ALL-UNNAMED \
 -Djavax.servlet.request.encoding=UTF-8 \
 -Djavax.servlet.response.encoding=UTF-8 \
 -D-XX:SoftRefLRUPolicyMSPerMB=36000 \
--Xms2048m -Xmx2048m \
+-Xms4096m -Xmx4096m \
 -Xbootclasspath/a:$CATALINA_HOME/lib/marlin.jar \
 -Dsun.java2d.renderer=sun.java2d.marlin.DMarlinRenderingEngine \
 -Dorg.geotools.coverage.jaiext.enabled=true \
@@ -32,7 +32,7 @@ docker run --rm --name pubdb -p 54322:5432 -v pgdata-geoserver-benchmark:/var/li
 ```
 
 ```
-docker run -i --rm --name gretl --entrypoint="/bin/sh" -v $PWD:/home/gradle/project sogis/gretl:latest -c 'gretl' tasks --all
+docker run -i --rm --name gretl --entrypoint="/bin/sh" -v $PWD:/home/gradle/project sogis/gretl:latest -c 'gretl tasks --all'
 ```
 
 ```
@@ -58,11 +58,40 @@ http://localhost:8080/geoserver/topp/wms?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMa
 /Users/stefan/apps/apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l temurin-17-g1gc.jtl -e -o temurin-17-g1gc
 ```
 
+
 ```
 apt-get update
-apt-get install xubuntu-desktop
+apt-get install zip unzip
+curl -s "https://get.sdkman.io" | bash
+```
+
+```
+apt-get update
+#apt-get install xubuntu-desktop
+apt-get install xfce4-goodies xfce4
+
+
 apt-get install software-properties-common
 add-apt-repository ppa:x2go/stable
 apt-get update
 apt-get install x2goserver x2goserver-xsession
 ```
+
+
+```
+Caused by: org.gradle.api.UncheckedIOException: Failed to create parent directory '/home/gradle/project/.gradle' when creating directory '/home/gradle/project/.gradle/5.1.1/fileHashes'
+	at org.gradle.util.GFileUtils.mkdirs(GFileUtils.java:327)
+	at org.gradle.cache.internal.DefaultPersistentDirectoryStore.open(DefaultPersistentDirectoryStore.java:75)
+	at org.gradle.cache.internal.DefaultPersistentDirectoryStore.open(DefaultPersistentDirectoryStore.java:42)
+	at org.gradle.cache.internal.DefaultCacheFactory.doOpen(DefaultCacheFactory.java:94)
+	at org.gradle.cache.internal.DefaultCacheFactory.open(DefaultCacheFactory.java:68)
+	at org.gradle.cache.internal.DefaultCacheRepository$PersistentCacheBuilder.open(DefaultCacheRepository.java:118)
+	at org.gradle.api.internal.changedetection.state.CrossBuildFileHashCache.<init>(CrossBuildFileHashCache.java:45)
+	at org.gradle.internal.service.scopes.BuildSessionScopeServices.createCrossBuildFileHashCache(BuildSessionScopeServices.java:159)
+	at org.gradle.internal.reflect.JavaMethod.invoke(JavaMethod.java:73)
+	at org.gradle.internal.service.ReflectionBasedServiceMethod.invoke(ReflectionBasedServiceMethod.java:35)
+	at org.gradle.internal.service.DefaultServiceRegistry$FactoryMethodService.invokeMethod(DefaultServiceRegistry.java:821)
+	... 92 more
+```
+
+-> `chmod -R 777 .`

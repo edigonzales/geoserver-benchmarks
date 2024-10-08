@@ -8,8 +8,8 @@ apply plugin: 'ch.so.agi.gretl'
 //defaultTasks 'createSchema'
 
 def pathToTempFolder = System.getProperty('java.io.tmpdir')
-//def dbUriPub = 'jdbc:postgresql://localhost:54322/pub'
-def dbUriPub = 'jdbc:postgresql://host.docker.internal:54322/pub'
+def dbUriPub = 'jdbc:postgresql://localhost:54322/pub'
+//def dbUriPub = 'jdbc:postgresql://host.docker.internal:54322/pub'
 def dbUserPub = 'postgres' 
 def dbPwdPub = 'secret'
 
