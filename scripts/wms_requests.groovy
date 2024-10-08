@@ -236,14 +236,18 @@ while (count > 0) {
             def srs2_width = Math.floor(delta_transformed * srs2_height)
         }
 
+        def layers = ["nutzungsplanung_grundnutzung", "ch.swisstopo.swissimage_2021.rgb"];
+        int randomIndex = random.nextInt(layers.size());
+        String randomLayer = layers[randomIndex];
+
         if (first) {
-            output_file.write(width+";"+height+";"+bbox[0]+","+bbox[1]+","+bbox[2]+","+bbox[3]+"\n")
+            output_file.write(width+";"+height+";"+bbox[0]+","+bbox[1]+","+bbox[2]+","+bbox[3]+";"+randomLayer+"\n")
             if (srs_output != null) {
                 output_file2.write("$srs2_width;$srs2_height;${transformed.minX},${transformed.minY},${transformed.maxX},${transformed.maxY}\n")
             }
             first = false
         } else {
-            output_file.write(width+";"+height+";"+bbox[0]+","+bbox[1]+","+bbox[2]+","+bbox[3]+"\n")
+            output_file.write(width+";"+height+";"+bbox[0]+","+bbox[1]+","+bbox[2]+","+bbox[3]+";"+randomLayer+"\n")
             if (srs_output != null) {
                 output_file2.write("$srs2_width;$srs2_height;${transformed.minX},${transformed.minY},${transformed.maxX},${transformed.maxY}\n")
             }

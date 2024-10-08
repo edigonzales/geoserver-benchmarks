@@ -1215,7 +1215,7 @@
             </ogc:PropertyIsEqualTo>
           </ogc:Filter>
           <se:MinScaleDenominator>19000</se:MinScaleDenominator>
-          <se:MaxScaleDenominator>500000</se:MaxScaleDenominator>
+          <se:MaxScaleDenominator>1500000</se:MaxScaleDenominator>
           <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#ff9900</se:SvgParameter>
@@ -1238,7 +1238,7 @@
             </ogc:PropertyIsEqualTo>
           </ogc:Filter>
           <se:MinScaleDenominator>19000</se:MinScaleDenominator>
-          <se:MaxScaleDenominator>500000</se:MaxScaleDenominator>
+          <se:MaxScaleDenominator>1500000</se:MaxScaleDenominator>
           <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#ffccff</se:SvgParameter>
@@ -1261,7 +1261,7 @@
             </ogc:PropertyIsEqualTo>
           </ogc:Filter>
           <se:MinScaleDenominator>19000</se:MinScaleDenominator>
-          <se:MaxScaleDenominator>500000</se:MaxScaleDenominator>
+          <se:MaxScaleDenominator>1500000</se:MaxScaleDenominator>
           <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#f4a49f</se:SvgParameter>
@@ -1307,7 +1307,7 @@
             </ogc:PropertyIsEqualTo>
           </ogc:Filter>
           <se:MinScaleDenominator>19000</se:MinScaleDenominator>
-          <se:MaxScaleDenominator>500000</se:MaxScaleDenominator>
+          <se:MaxScaleDenominator>1500000</se:MaxScaleDenominator>
           <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#cccccc</se:SvgParameter>
@@ -1330,7 +1330,7 @@
             </ogc:PropertyIsEqualTo>
           </ogc:Filter>
           <se:MinScaleDenominator>19000</se:MinScaleDenominator>
-          <se:MaxScaleDenominator>500000</se:MaxScaleDenominator>
+          <se:MaxScaleDenominator>1500000</se:MaxScaleDenominator>
           <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#7eff31</se:SvgParameter>
@@ -1353,7 +1353,7 @@
             </ogc:PropertyIsEqualTo>
           </ogc:Filter>
           <se:MinScaleDenominator>19000</se:MinScaleDenominator>
-          <se:MaxScaleDenominator>500000</se:MaxScaleDenominator>
+          <se:MaxScaleDenominator>1500000</se:MaxScaleDenominator>
           <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#cb99ff</se:SvgParameter>
@@ -1376,7 +1376,7 @@
             </ogc:PropertyIsEqualTo>
           </ogc:Filter>
           <se:MinScaleDenominator>19000</se:MinScaleDenominator>
-          <se:MaxScaleDenominator>500000</se:MaxScaleDenominator>
+          <se:MaxScaleDenominator>1500000</se:MaxScaleDenominator>
           <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#fafafa</se:SvgParameter>
@@ -1399,7 +1399,7 @@
             </ogc:PropertyIsEqualTo>
           </ogc:Filter>
           <se:MinScaleDenominator>19000</se:MinScaleDenominator>
-          <se:MaxScaleDenominator>500000</se:MaxScaleDenominator>
+          <se:MaxScaleDenominator>1500000</se:MaxScaleDenominator>
           <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#9999ff</se:SvgParameter>
@@ -1422,7 +1422,7 @@
             </ogc:PropertyIsEqualTo>
           </ogc:Filter>
           <se:MinScaleDenominator>19000</se:MinScaleDenominator>
-          <se:MaxScaleDenominator>500000</se:MaxScaleDenominator>
+          <se:MaxScaleDenominator>1500000</se:MaxScaleDenominator>
           <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#ffffcc</se:SvgParameter>
@@ -1445,7 +1445,7 @@
             </ogc:PropertyIsEqualTo>
           </ogc:Filter>
           <se:MinScaleDenominator>19000</se:MinScaleDenominator>
-          <se:MaxScaleDenominator>500000</se:MaxScaleDenominator>
+          <se:MaxScaleDenominator>1500000</se:MaxScaleDenominator>
           <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#ffff66</se:SvgParameter>
@@ -1468,7 +1468,7 @@
             </ogc:PropertyIsEqualTo>
           </ogc:Filter>
           <se:MinScaleDenominator>19000</se:MinScaleDenominator>
-          <se:MaxScaleDenominator>500000</se:MaxScaleDenominator>
+          <se:MaxScaleDenominator>1500000</se:MaxScaleDenominator>
           <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#ffff99</se:SvgParameter>
@@ -1491,7 +1491,7 @@
             </ogc:PropertyIsEqualTo>
           </ogc:Filter>
           <se:MinScaleDenominator>19000</se:MinScaleDenominator>
-          <se:MaxScaleDenominator>500000</se:MaxScaleDenominator>
+          <se:MaxScaleDenominator>1500000</se:MaxScaleDenominator>
           <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#ffff66</se:SvgParameter>
@@ -1523,7 +1523,7 @@
             </ogc:PropertyIsEqualTo>
           </ogc:Filter>
           <se:MinScaleDenominator>19000</se:MinScaleDenominator>
-          <se:MaxScaleDenominator>500000</se:MaxScaleDenominator>
+          <se:MaxScaleDenominator>1500000</se:MaxScaleDenominator>
           <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#4dff73</se:SvgParameter>
@@ -1546,7 +1546,7 @@
             </ogc:PropertyIsEqualTo>
           </ogc:Filter>
           <se:MinScaleDenominator>19000</se:MinScaleDenominator>
-          <se:MaxScaleDenominator>500000</se:MaxScaleDenominator>
+          <se:MaxScaleDenominator>1500000</se:MaxScaleDenominator>
           <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#00ccff</se:SvgParameter>
@@ -1575,7 +1575,7 @@
             </ogc:PropertyIsEqualTo>
           </ogc:Filter>
           <se:MinScaleDenominator>19000</se:MinScaleDenominator>
-          <se:MaxScaleDenominator>500000</se:MaxScaleDenominator>
+          <se:MaxScaleDenominator>1500000</se:MaxScaleDenominator>
           <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#4dff73</se:SvgParameter>
@@ -1609,7 +1609,7 @@
             </ogc:PropertyIsEqualTo>
           </ogc:Filter>
           <se:MinScaleDenominator>19000</se:MinScaleDenominator>
-          <se:MaxScaleDenominator>500000</se:MaxScaleDenominator>
+          <se:MaxScaleDenominator>1500000</se:MaxScaleDenominator>
           <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#f2cc73</se:SvgParameter>
@@ -1632,7 +1632,7 @@
             </ogc:PropertyIsEqualTo>
           </ogc:Filter>
           <se:MinScaleDenominator>19000</se:MinScaleDenominator>
-          <se:MaxScaleDenominator>500000</se:MaxScaleDenominator>
+          <se:MaxScaleDenominator>1500000</se:MaxScaleDenominator>
           <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#fafafa</se:SvgParameter>
@@ -1655,7 +1655,7 @@
             </ogc:PropertyIsEqualTo>
           </ogc:Filter>
           <se:MinScaleDenominator>19000</se:MinScaleDenominator>
-          <se:MaxScaleDenominator>500000</se:MaxScaleDenominator>
+          <se:MaxScaleDenominator>1500000</se:MaxScaleDenominator>
           <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#e6e6e6</se:SvgParameter>
@@ -1678,7 +1678,7 @@
             </ogc:PropertyIsEqualTo>
           </ogc:Filter>
           <se:MinScaleDenominator>19000</se:MinScaleDenominator>
-          <se:MaxScaleDenominator>500000</se:MaxScaleDenominator>
+          <se:MaxScaleDenominator>1500000</se:MaxScaleDenominator>
           <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#ccffcc</se:SvgParameter>
@@ -1701,7 +1701,7 @@
             </ogc:PropertyIsEqualTo>
           </ogc:Filter>
           <se:MinScaleDenominator>19000</se:MinScaleDenominator>
-          <se:MaxScaleDenominator>500000</se:MaxScaleDenominator>
+          <se:MaxScaleDenominator>1500000</se:MaxScaleDenominator>
           <se:PolygonSymbolizer>
             <se:Fill>
               <se:SvgParameter name="fill">#ccffff</se:SvgParameter>

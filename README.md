@@ -4,6 +4,14 @@
 https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.95/bin/apache-tomcat-9.0.95.tar.gz`
 
 ```
+```
+wget http://sourceforge.net/projects/geoserver/files/GeoServer/2.26.0/geoserver-2.26.0-war.zip 
+```
+
+```
+wget https://files.geo.so.ch/ch.swisstopo.swissimage_2021.rgb/aktuell/ch.swisstopo.swissimage_2021.rgb.tif
+```
+
 
 ```
 export CATALINA_OPTS="--add-exports=java.desktop/sun.awt.image=ALL-UNNAMED \
@@ -32,7 +40,7 @@ docker run --rm --name pubdb -p 54322:5432 -v pgdata-geoserver-benchmark:/var/li
 ```
 
 ```
-docker run -i --rm --name gretl --entrypoint="/bin/sh" -v gradle_cache:/home/gradle/.gradle -v $PWD:/home/gradle/project sogis/gretl:latest -c 'gretl tasks --all'
+docker run -i --rm --name gretl --entrypoint="/bin/sh" -u $UID -v $PWD:/home/gradle/project sogis/gretl:latest -c 'gretl tasks --all'
 ```
 
 ```
@@ -48,6 +56,8 @@ java -jar ../../../Downloads/geoscript-groovy-app-1.22.0.jar script wms_requests
 
 ```
 java -jar ../../../Downloads/geoscript-groovy-app-1.22.0.jar script wms_requests.groovy -count 10000 -region 2590000 1210000 2650000 1270000 -maxres 50 -minres 0.01 -maxsize 2560 1440 -minsize 1920 1080 -filter_intersects gemeindegrenze.shp
+
+java -jar ../../../Downloads/geoscript-groovy-app-1.22.0.jar script wms_requests.groovy -count 50000 -region 2590000 1210000 2650000 1270000 -maxres 100 -minres 0.01 -maxsize 3840 2160 -minsize 1920 1080 -filter_intersects gemeindegrenze.shp
 ```
 
 ```
