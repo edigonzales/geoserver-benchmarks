@@ -105,3 +105,11 @@ Caused by: org.gradle.api.UncheckedIOException: Failed to create parent director
 ```
 
 -> `chmod -R 777 .`
+
+
+```
+../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx -l graal-17-g1gc.jtl -e -o graal-17-g1gc
+
+
+
+```
