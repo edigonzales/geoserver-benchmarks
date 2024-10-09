@@ -72,6 +72,12 @@ http://localhost:8080/geoserver/topp/wms?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMa
 ../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l temurin-17-g1gc-v1.jtl -e -o temurin-17-g1gc-v1
 ../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l graal-17-g1gc-v2.jtl -e -o graal-17-g1gc-v2
 
+
+../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l graal-17-g1gc-arm-v1.jtl -e -o graal-17-g1gc-arm-v1
+
+
+
+
 ```
 
 
