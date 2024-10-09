@@ -1,7 +1,8 @@
 # geoserver-benchmarks
 
 ```
-https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.95/bin/apache-tomcat-9.0.95.tar.gz`
+wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.95/bin/apache-tomcat-9.0.95.tar.gz
+wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.96/bin/apache-tomcat-9.0.96.tar.gz
 
 ```
 ```
@@ -12,6 +13,7 @@ wget http://sourceforge.net/projects/geoserver/files/GeoServer/2.26.0/geoserver-
 wget https://files.geo.so.ch/ch.swisstopo.swissimage_2021.rgb/aktuell/ch.swisstopo.swissimage_2021.rgb.tif
 ```
 
+curl -s "https://get.sdkman.io" | bash
 
 ```
 export CATALINA_OPTS="--add-exports=java.desktop/sun.awt.image=ALL-UNNAMED \
@@ -65,7 +67,11 @@ http://localhost:8080/geoserver/topp/wms?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMa
 ```
 
 ```
-/Users/stefan/apps/apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l temurin-17-g1gc.jtl -e -o temurin-17-g1gc
+/Users/stefan/apps/apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l graal-17-g1gc.jtl -e -o graal-17-g1gc
+../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l graal-17-g1gc-v1.jtl -e -o graal-17-g1gc-v1
+../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l temurin-17-g1gc-v1.jtl -e -o temurin-17-g1gc-v1
+../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l graal-17-g1gc-v2.jtl -e -o graal-17-g1gc-v2
+
 ```
 
 
