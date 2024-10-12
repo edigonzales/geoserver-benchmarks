@@ -13,6 +13,10 @@ wget http://sourceforge.net/projects/geoserver/files/GeoServer/2.26.0/geoserver-
 wget https://files.geo.so.ch/ch.swisstopo.swissimage_2021.rgb/aktuell/ch.swisstopo.swissimage_2021.rgb.tif
 ```
 
+```
+wget https://dlcdn.apache.org//jmeter/binaries/apache-jmeter-5.6.3.zip
+```
+
 curl -s "https://get.sdkman.io" | bash
 
 ```
@@ -35,6 +39,57 @@ export CATALINA_OPTS="--add-exports=java.desktop/sun.awt.image=ALL-UNNAMED \
 -Dsun.java2d.renderer=sun.java2d.marlin.DMarlinRenderingEngine \
 -Dorg.geotools.coverage.jaiext.enabled=true \
 -Dorg.apache.tomcat.util.digester.PROPERTY_SOURCE=org.apache.tomcat.util.digester.EnvironmentPropertySource"
+```
+
+```
+export CATALINA_OPTS="--add-exports=java.desktop/sun.awt.image=ALL-UNNAMED \
+--add-opens=java.base/java.lang=ALL-UNNAMED \
+--add-opens=java.base/java.util=ALL-UNNAMED \
+--add-opens=java.base/java.lang.reflect=ALL-UNNAMED \
+--add-opens=java.base/java.text=ALL-UNNAMED \
+--add-opens=java.desktop/java.awt.font=ALL-UNNAMED \
+--add-opens=java.desktop/sun.awt.image=ALL-UNNAMED \
+--add-opens=java.naming/com.sun.jndi.ldap=ALL-UNNAMED \
+--add-opens=java.desktop/sun.java2d.pipe=ALL-UNNAMED \
+-server -Djava.awt.headless=true \
+-Dfile.encoding=UTF-8 \
+-Djavax.servlet.request.encoding=UTF-8 \
+-Djavax.servlet.response.encoding=UTF-8 \
+-D-XX:SoftRefLRUPolicyMSPerMB=36000 \
+-D-XX:+UseParallelGC \
+-Xms4096m -Xmx4096m \
+-Xbootclasspath/a:$CATALINA_HOME/lib/marlin.jar \
+-Dsun.java2d.renderer=sun.java2d.marlin.DMarlinRenderingEngine \
+-Dorg.geotools.coverage.jaiext.enabled=true \
+-Dorg.apache.tomcat.util.digester.PROPERTY_SOURCE=org.apache.tomcat.util.digester.EnvironmentPropertySource"
+```
+
+```
+export CATALINA_OPTS="--add-exports=java.desktop/sun.awt.image=ALL-UNNAMED \
+--add-opens=java.base/java.lang=ALL-UNNAMED \
+--add-opens=java.base/java.util=ALL-UNNAMED \
+--add-opens=java.base/java.lang.reflect=ALL-UNNAMED \
+--add-opens=java.base/java.text=ALL-UNNAMED \
+--add-opens=java.desktop/java.awt.font=ALL-UNNAMED \
+--add-opens=java.desktop/sun.awt.image=ALL-UNNAMED \
+--add-opens=java.naming/com.sun.jndi.ldap=ALL-UNNAMED \
+--add-opens=java.desktop/sun.java2d.pipe=ALL-UNNAMED \
+-server -Djava.awt.headless=true \
+-Dfile.encoding=UTF-8 \
+-Djavax.servlet.request.encoding=UTF-8 \
+-Djavax.servlet.response.encoding=UTF-8 \
+-D-XX:SoftRefLRUPolicyMSPerMB=36000 \
+-D-XX:+UseStringDeduplicationJVM \
+-Xms4096m -Xmx4096m \
+-Xbootclasspath/a:$CATALINA_HOME/lib/marlin.jar \
+-Dsun.java2d.renderer=sun.java2d.marlin.DMarlinRenderingEngine \
+-Dorg.geotools.coverage.jaiext.enabled=true \
+-Dorg.apache.tomcat.util.digester.PROPERTY_SOURCE=org.apache.tomcat.util.digester.EnvironmentPropertySource"
+```
+
+
+```
+/root/geoserver-benchmarks/scripts/2056.csv
 ```
 
 ```
@@ -67,16 +122,47 @@ http://localhost:8080/geoserver/topp/wms?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMa
 ```
 
 ```
-/Users/stefan/apps/apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l graal-17-g1gc.jtl -e -o graal-17-g1gc
+magick montage flotHitsPerSecond.png flotHitsPerSecond_1.png flotHitsPerSecond_2.png flotHitsPerSecond_3.png -tile 2x2 -geometry +0+0 graal-17-g1gc.png
+```
+
+```
+/Users/stefan/apps/apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l graal-17-g1gc-v1.jtl -e -o graal-17-g1gc-v1
+
+
 ../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l graal-17-g1gc-v1.jtl -e -o graal-17-g1gc-v1
 ../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l temurin-17-g1gc-v1.jtl -e -o temurin-17-g1gc-v1
 ../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l graal-17-g1gc-v2.jtl -e -o graal-17-g1gc-v2
+../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l temurin-17-g1gc-v2.jtl -e -o temurin-17-g1gc-v2
+../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l graal-17-g1gc-v3.jtl -e -o graal-17-g1gc-v3
+../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l temurin-17-g1gc-v3.jtl -e -o temurin-17-g1gc-v3
+../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l graal-17-g1gc-v4.jtl -e -o graal-17-g1gc-v4
+../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l temurin-17-g1gc-v4.jtl -e -o temurin-17-g1gc-v4
+
+../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l temurin-11-g1gc-v1.jtl -e -o temurin-11-g1gc-v1
+../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l temurin-11-g1gc-v2.jtl -e -o temurin-11-g1gc-v2
+../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l temurin-11-g1gc-v3.jtl -e -o temurin-11-g1gc-v3
+../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l temurin-11-g1gc-v4.jtl -e -o temurin-11-g1gc-v4
+
+../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l graal-17-parallelgc-v1.jtl -e -o graal-17-parallelgc-v1
+../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l graal-17-parallelgc-v2.jtl -e -o graal-17-parallelgc-v2
+../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l graal-17-parallelgc-v3.jtl -e -o graal-17-parallelgc-v3
+../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l graal-17-parallelgc-v4.jtl -e -o graal-17-parallelgc-v4
+
+../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l graal-21-g1gc-v1.jtl -e -o graal-21-g1gc-v1
+
+
 
 
 ../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l graal-17-g1gc-arm-v1.jtl -e -o graal-17-g1gc-arm-v1
+../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l temurin-17-g1gc-arm-v1.jtl -e -o temurin-17-g1gc-arm-v1
+../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l graal-17-g1gc-arm-v2.jtl -e -o graal-17-g1gc-arm-v2
+../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l temurin-17-g1gc-arm-v2.jtl -e -o temurin-17-g1gc-arm-v2
+../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l graal-17-g1gc-arm-v3.jtl -e -o graal-17-g1gc-arm-v3
+../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l temurin-17-g1gc-arm-v3.jtl -e -o temurin-17-g1gc-arm-v3
 
-
-
+../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l graal-17-g1gc-stringdupl-arm-v1.jtl -e -o graal-17-g1gc-stringdupl-arm-v1
+../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l graal-17-g1gc-stringdupl-arm-v2.jtl -e -o graal-17-g1gc-stringdupl-arm-v2
+https://blog.gceasy.io/degradation-in-string-deduplication-performance-in-recent-java-versions/
 
 ```
 
