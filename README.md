@@ -149,7 +149,10 @@ magick montage flotHitsPerSecond.png flotHitsPerSecond_1.png flotHitsPerSecond_2
 ../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l graal-17-parallelgc-v4.jtl -e -o graal-17-parallelgc-v4
 
 ../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l graal-21-g1gc-v1.jtl -e -o graal-21-g1gc-v1
-
+../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l graal-21-g1gc-v2.jtl -e -o graal-21-g1gc-v2
+../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l graal-21-g1gc-v3.jtl -e -o graal-21-g1gc-v3
+../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l graal-21-g1gc-v4.jtl -e -o graal-21-g1gc-v4
+../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l graal-17-g1gc-v5.jtl -e -o graal-17-g1gc-v5
 
 
 
@@ -159,6 +162,12 @@ magick montage flotHitsPerSecond.png flotHitsPerSecond_1.png flotHitsPerSecond_2
 ../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l temurin-17-g1gc-arm-v2.jtl -e -o temurin-17-g1gc-arm-v2
 ../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l graal-17-g1gc-arm-v3.jtl -e -o graal-17-g1gc-arm-v3
 ../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l temurin-17-g1gc-arm-v3.jtl -e -o temurin-17-g1gc-arm-v3
+
+../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l graal-21-g1gc-arm-v1.jtl -e -o graal-21-g1gc-arm-v1
+../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l graal-21-g1gc-arm-v2.jtl -e -o graal-21-g1gc-arm-v2
+../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l graal-21-g1gc-arm-v3.jtl -e -o graal-21-g1gc-arm-v3
+../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l graal-17-g1gc-arm-v4.jtl -e -o graal-17-g1gc-arm-v4
+
 
 ../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l graal-17-g1gc-stringdupl-arm-v1.jtl -e -o graal-17-g1gc-stringdupl-arm-v1
 ../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l graal-17-g1gc-stringdupl-arm-v2.jtl -e -o graal-17-g1gc-stringdupl-arm-v2
