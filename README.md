@@ -128,6 +128,8 @@ magick montage flotHitsPerSecond.png flotHitsPerSecond_1.png flotHitsPerSecond_2
 ```
 /Users/stefan/apps/apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l graal-17-g1gc-v1.jtl -e -o graal-17-g1gc-v1
 
+../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l graal-17-g1gc-controlflow-v1.jtl -e -o graal-17-g1gc-controlflow-v1 (ows.wms.getmap=12)
+
 
 ../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l graal-17-g1gc-v1.jtl -e -o graal-17-g1gc-v1
 ../apache-jmeter-5.6.3/bin/jmeter -n -t benchmark.jmx  -l temurin-17-g1gc-v1.jtl -e -o temurin-17-g1gc-v1
